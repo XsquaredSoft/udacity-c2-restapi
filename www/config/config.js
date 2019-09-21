@@ -2,14 +2,14 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.config = {
     "dev": {
-        "username": "udagramruttnerdev",
-        "password": "udagramruttnerdev",
-        "database": "udagramruttnerdev",
-        "host": "udagramruttnerdev.c79fzt27bzf6.us-east-2.rds.amazonaws.com",
+        "username": process.env.POSTGRESS_USERNAME,
+        "password": process.env.POSTGRESS_PASSWORD,
+        "database": process.env.POSTGRESS_DATABASE,
+        "host": process.env.POSTGRESS_HOST,
         "dialect": "postgres",
         "aws_reigion": "us-east-2",
         "aws_profile": "default",
-        "aws_media_bucket": "udagram-ruttner-dev"
+        "aws_media_bucket": "udagram-binseddeq-dev"
     },
     "prod": {
         "username": "",
@@ -17,6 +17,9 @@ exports.config = {
         "database": "udagram_prod",
         "host": "",
         "dialect": "postgres"
+    },
+    "jwt": {
+        "secret": "helloworld"
     }
 };
 //# sourceMappingURL=config.js.map
